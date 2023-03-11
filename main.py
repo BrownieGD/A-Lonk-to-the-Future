@@ -21,7 +21,6 @@ enemy01 = Enemy()
 while True:
     enemy01.bewegung(Lonk_x_pos,Lonk_y_pos)
     for event in pygame.event.get():
-        
         if event.type == pygame.QUIT:
             pygame.quit()
             exit()
@@ -52,10 +51,6 @@ while True:
 
     elif keys[pygame.K_d] and Lonk_x_pos<950:
         Lonk_x_pos += vel
-        
-
-        
-        
     
     screen.blit(test_surface,(0,0))
     screen.blit(Lonk,(Lonk_x_pos,Lonk_y_pos))
