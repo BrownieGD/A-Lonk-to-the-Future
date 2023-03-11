@@ -12,6 +12,9 @@ class Health:
         self.hp = Php
         self.health_bar_font = pygame.font.Font(None,40)
         self.health_bar_canvas = self.health_bar_font.render(str(self.hp),True,"Red")
+    def reduce_hp(self,Pnumber):
+        global hp
+        hp = hp - Pnumber
 
     def render_hp(self):
         from main import screen
