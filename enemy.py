@@ -8,7 +8,7 @@ class Enemy:
         self.e_height = enemey_height
         self.e_vel = enemy_velocity
     def bewegung(self,lonk_x,lonk_y):
-        from main import test_surface
+        from main import screen
         if lonk_y > self.e_y:
             if lonk_x > self.e_x:
                 if lonk_x - self.e_x > lonk_y - self.e_y:
@@ -46,5 +46,5 @@ class Enemy:
                 elif lonk_x - self.e_x == (lonk_y -self.e_y)*-1:
                     self.e_y += self.e_vel/1.2
                     self.e_x += self.e_vel/1.2
-        pygame.draw.rect(test_surface, (255, 0, 0), (self.e_x, self.e_y, self.e_width, self.e_height)) 
+        pygame.draw.rect(screen, (255, 0, 0), (self.e_x, self.e_y, self.e_width, self.e_height)) 
 
