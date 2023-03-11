@@ -3,6 +3,7 @@ import pygame
 class Character:
     def __init__(self):
         self.Lonk = pygame.Surface((50,50)).convert_alpha()
+        self.Lonk_Rect = self.Lonk.get_rect()
         self.Lonk.fill('blue')
         self.Lonk_x_pos = 475
         self.Lonk_y_pos = 275
