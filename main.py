@@ -1,4 +1,5 @@
 import pygame
+from enemy import Enemy
 from sys import exit
 
 pygame.init()
@@ -15,7 +16,10 @@ Lonk_x_pos = 475
 Lonk_y_pos = 275
 vel = 5
 
+enemy01 = Enemy()
+
 while True:
+    enemy01.bewegung(Lonk_x_pos,Lonk_y_pos)
     for event in pygame.event.get():
         
         if event.type == pygame.QUIT:
@@ -49,7 +53,7 @@ while True:
     elif keys[pygame.K_d] and Lonk_x_pos<950:
         Lonk_x_pos += vel
         
-    
+
         
         
     
