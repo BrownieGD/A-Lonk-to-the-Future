@@ -1,4 +1,6 @@
 import pygame
+from Health import Health
+
 
 class Character:
     def __init__(self):
@@ -40,3 +42,9 @@ class Character:
         elif keys[pygame.K_d] and self.Lonk_x_pos<950:
             self.Lonk_x_pos += self.vel
         screen.blit(self.Lonk,(self.Lonk_x_pos,self.Lonk_y_pos))
+
+    def hit_detection(self,damage):
+        from main import health_bar
+        if self.Lonk_Rect.colliderect:
+            health_bar.reduce_hp(1)
+
